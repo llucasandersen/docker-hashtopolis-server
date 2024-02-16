@@ -7,7 +7,7 @@ services:
     volumes:
       - mysql:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: changemeRoot
+      MYSQL_ROOT_PASSWORD: GPgpCBQCcDAnWmASrLNmcT6SB
     restart: unless-stopped
 
   hashtopolis:
@@ -16,14 +16,14 @@ services:
     depends_on:
       - mysql
     environment:
-      H8_USER: root  # This is the username you'll be logging into Hashtopolis with
-      H8_PASS: changemeHTPuser  # This is the password you'll be logging into Hashtopolis with
-      H8_EMAIL: root@localhost
-      MYSQL_HOST: mysql
+      H8_USER: lucas  # This is the username you'll be logging into Hashtopolis with
+      H8_PASS: Luke1221**  # This is the password you'll be logging into Hashtopolis with
+      H8_EMAIL: lucas@lucasserver.cloud
+      MYSQL_HOST: srv-captain--mysql
       MYSQL_PORT: 3306
-      MYSQL_ROOT_PASSWORD: changemeRoot  # This should be the same password defined for the 'mysql' container
+      MYSQL_ROOT_PASSWORD: GPgpCBQCcDAnWmASrLNmcT6SB
       MYSQL_DB: hashtopolis
-      HTP_SERVER_NAME: htp.example.com
+      HTP_SERVER_NAME: hashtopolis.lucasserver.cloud
       HTP_MEMORY_LIMIT: 512M
       HTP_UPLOAD_MAX_SIZE: 500M
     volumes:
